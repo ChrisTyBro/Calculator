@@ -1,7 +1,10 @@
+:root {
+    color-scheme: light dark;
+}
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 #calc {
     width: 100%;
@@ -11,39 +14,41 @@
     align-items: center;
 }
 #content {
-    background: white;
-    border: 2px solid #2c302c;
+    background: light-dark(white, #111);
+    border: 3px solid light-dark(#111, white);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
 
 }
 #content form input {
-    border: 2px solid #2c302c;
+    border: 1px solid ;
+    border-color: light-dark(#111, body);
     outline: 0;
     width: 50px;
     height: 50px;
-    border-radius: 8px;
+    border-radius: 15px;
     font-size: 15px;
-    margin: 10px;
+    margin: 8px;
     cursor: pointer;
 }
 #backspace {
-    background-color: rgb(237, 89, 30);
+    background-color: #007a79;
     color: white;
 }
 #res {
-    background: #9e9a90;
+    border: 2px solid light-dark(#111, body);
+    background:  light-dark(#f0f0f0, gray);
     padding: 10px;
-    color: white;
+    color: light-dark(#111, #f0f0f0);
 }
 #clear {
-    background-color: rgb(237, 89, 30);
+    background-color: #007a79;
     color: white;
 }
 form #output {
     display: flex;
     justify-content: flex-end;
-    margin: 15px 0;
+    margin: 8px 0;
 }
 form #output input {
     text-align: right;

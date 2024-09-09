@@ -23,8 +23,12 @@ document.addEventListener('keydown', function (event) {
     const key = event.key;
     const validKeys = '0123456789+-*/.%';
     if (validKeys.includes(key)) {
-        Solve(key === '*' ? 'x' : key);
+        Solve(key === 'x' ? '*' : key);
+    } else if (key === 'x') {
+        Solve('*');
     } else if (key === 'Enter') {
+        Result();
+    } else if (key === '=') {
         Result();
     } else if (key === 'Backspace') {
         Back();
