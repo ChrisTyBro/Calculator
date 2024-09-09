@@ -31,4 +31,4 @@ document.addEventListener('keydown', function (event) {
     } else if (key.toLowerCase() === 'c') {
         Clear();
     }
-});1
+});
